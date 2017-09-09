@@ -1,9 +1,13 @@
 ///initialize object varaibles
 hp = 3;
-accel_spd = 3; //horizontal speed
+accel_spd = 3; 
 decel_spd = 1;
-hsp = 0; 
-vsp = 0;
-//vertical speed
-max_spd = 15;
+hsp = 0; //horizontal speed
+vsp = 0; //vertical speed
 
+max_spd = 15;
+gpad_A= gp_face1;
+gpad_B = gp_face2;
+gpad_start= gp_start;
+
+can_shoot = 1; //determines how often we can shoot bullets.
