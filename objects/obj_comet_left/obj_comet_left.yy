@@ -1,32 +1,22 @@
 {
-    "id": "5dcf2ab6-9941-4183-8e26-1baaaa14b57d",
+    "id": "9476eb40-e869-4bdb-b284-537eb773da7c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy",
+    "name": "obj_comet_left",
     "eventList": [
         {
-            "id": "57c18caa-84ff-493d-baf8-3c8f2e816d71",
+            "id": "8e03673b-fb60-4e0d-81d7-730d94721f6d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "5dcf2ab6-9941-4183-8e26-1baaaa14b57d"
-        },
-        {
-            "id": "ec834edc-06ba-4bf9-a3dc-e0130fc75968",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "279e2876-915f-4d5c-a900-65e45e9d3416",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "5dcf2ab6-9941-4183-8e26-1baaaa14b57d"
+            "eventtype": 3,
+            "m_owner": "9476eb40-e869-4bdb-b284-537eb773da7c"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "5dcf2ab6-9941-4183-8e26-1baaaa14b57d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

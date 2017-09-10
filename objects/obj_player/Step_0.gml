@@ -111,3 +111,9 @@ else
 	alarm[0] = 45;
 }
 */
+
+//Destroy player if health reaches 0
+if (player_hp == 0)
+{
+	instance_destroy();
+}
