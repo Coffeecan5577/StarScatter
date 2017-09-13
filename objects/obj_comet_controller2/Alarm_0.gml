@@ -1,6 +1,6 @@
 //random Y value for test spawning
 randomize();
-x_spawn_pos = room_width; //Spawn on left side of the screen.
+x_spawn_pos = room_width; //Spawn on right side of the screen.
 y_spawn_pos = random_range(0, 300); //This returns a decimal by default, so we need to round.
 
 //Create the comet

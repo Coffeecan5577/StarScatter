@@ -1,11 +1,11 @@
 ///initialize object varaibles
 player_hp = 3;
-accel_spd = 3; 
+accel_spd = 1; 
 decel_spd = 1;
 hsp = 0; //horizontal speed
 vsp = 0; //vertical speed
 
-max_spd = 15;
+max_spd = 5;
 gpad_A= gp_face1;
 gpad_B = gp_face2;
 gpad_start= gp_start;
