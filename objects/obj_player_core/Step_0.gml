@@ -23,12 +23,12 @@ if (keyboard_check(vk_left)) && (keyboard_check(vk_right)) || !(keyboard_check(v
 }
 
 //keeping player in room boundaries horizontally
-if(obj_player.x <= 96) && keyboard_check(vk_left)
+if(obj_player_core.x <= 96) && keyboard_check(vk_left)
 {
 	hsp = 0;
 }
 
-else if (obj_player.x >= room_width - 96) && keyboard_check(vk_right)
+else if (obj_player_core.x >= room_width - 96) && keyboard_check(vk_right)
 {
 	hsp = 0;
 }
@@ -87,12 +87,12 @@ if (gamepad_axis_value(0, gp_axislv) > 0.4) || (gamepad_axis_value(0, gp_axislv)
 }
 
 //keeping player in room boundaries vertically
-if(obj_player.y <= 128) && keyboard_check(vk_up)
+if(obj_player_core.y <= 128) && keyboard_check(vk_up)
 {
 	vsp = 0;
 }
 
-else if (obj_player.y >= room_height - 64) && keyboard_check(vk_down)
+else if (obj_player_core.y >= room_height - 64) && keyboard_check(vk_down)
 {
 	vsp = 0;
 }
