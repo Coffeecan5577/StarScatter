@@ -76,6 +76,7 @@ else
 }
 
 //controller movement:
+/*
 if (gamepad_axis_value(0, gp_axislh) > 0.4) || (gamepad_axis_value(0, gp_axislh) < (-0.4))
 {
 	hsp = gamepad_axis_value(0, gp_axislh);
@@ -85,6 +86,7 @@ if (gamepad_axis_value(0, gp_axislv) > 0.4) || (gamepad_axis_value(0, gp_axislv)
 {
 	vsp = gamepad_axis_value(0, gp_axislv);
 }
+*/
 
 //keeping player in room boundaries vertically
 if(obj_player_core.y <= 128) && keyboard_check(vk_up)
@@ -113,17 +115,12 @@ else
 */
 
 
-//Chunk for detecting collisions with comets, and changin star pieces value
-if ((place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right)) && star_pieces >= 1)
+if (place_meeting(x, y, obj_star_piece))
 {
-	star_pieces -= 1;
-	global.player_hp -= 1;
+	star_pieces += 1;
 }
 
-else if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
-{
-	global.player_hp -= 1; //Just subtract one HP
-}
+//Chunk for detecting collisions with comets, and changing star pieces value
 
 //Switch case for changing sprites based on star pieces value:
 switch (star_pieces)
@@ -136,21 +133,37 @@ switch (star_pieces)
 	case 1:
 	{
 		sprite_index = spr_player_top_piece; 
+		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
+		{
+			star_pieces -= 1;
+		}
 		break;
 	}
 	case 2:
 	{
 		sprite_index = spr_player_left_piece;
+		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
+		{
+			star_pieces -= 1;
+		}
 		break;
 	}
 	case 3:
 	{
 		sprite_index = spr_player_right_piece;
+		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
+		{
+			star_pieces -= 1;
+		}
 		break;
 	}
 	case 4:
 	{
 		sprite_index = spr_player_left_leg;
+		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
+		{
+			star_pieces -= 1;
+		}
 		break;
 	}
 	case 5:

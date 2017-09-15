@@ -167,14 +167,6 @@
             }
         },
         {
-            "Key": "586b8133-e3ac-4dbb-a561-f3ce03fbf564",
-            "Value": {
-                "id": "35cd1658-df40-4204-9157-a96aacbdfd57",
-                "resourcePath": "sprites\\spr_star_explosion\\spr_star_explosion.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "59caa2e6-ed02-4fbd-b342-f3ed7626c91d",
             "Value": {
                 "id": "7c1ebb8a-ec10-41fb-801a-65c527457330",
