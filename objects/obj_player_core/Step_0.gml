@@ -114,15 +114,40 @@ else
 }
 */
 
+//Chunk for detecting collisions with comets, and changing star pieces value
+if (comet_collision)
+{
+	global.player_hp -= 1;
+}
+else
+{
+	comet_collision = false;
+}
 
-if (place_meeting(x, y, obj_star_piece))
+
+//Checking star pieces value
+if (comet_collision && star_pieces >= 1 && star_pieces <= 4)
+{
+	star_pieces -= 1;
+	global.player_hp -= 1;
+}
+
+//Limiter for star pieces value 
+if (star_pieces == 0 && comet_collision)
+{
+	//Just decrement health
+	global.player_hp -= 1;
+}
+
+//Colliding with star pieces
+if (star_piece_obtained)
 {
 	star_pieces += 1;
 }
 
-//Chunk for detecting collisions with comets, and changing star pieces value
 
 //Switch case for changing sprites based on star pieces value:
+
 switch (star_pieces)
 {
 	case 0:
@@ -133,37 +158,21 @@ switch (star_pieces)
 	case 1:
 	{
 		sprite_index = spr_player_top_piece; 
-		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
-		{
-			star_pieces -= 1;
-		}
 		break;
 	}
 	case 2:
 	{
 		sprite_index = spr_player_left_piece;
-		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
-		{
-			star_pieces -= 1;
-		}
 		break;
 	}
 	case 3:
 	{
 		sprite_index = spr_player_right_piece;
-		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
-		{
-			star_pieces -= 1;
-		}
 		break;
 	}
 	case 4:
 	{
 		sprite_index = spr_player_left_leg;
-		if (place_meeting(x, y, obj_comet_left)) || (place_meeting(x, y, obj_comet_right))
-		{
-			star_pieces -= 1;
-		}
 		break;
 	}
 	case 5:
@@ -181,6 +190,7 @@ if (global.player_hp == 0)
 	//Draw Text in middle of screen
 	//Play game over sound.
 	//Set an alarm for about 4 seconds, then go back to title screen.
+	//Restart the game once alarm goes off.
 }
 
 //Winning conditions.
@@ -189,4 +199,5 @@ if (star_pieces == 5)
 	//Draw text that says we win the game.
 	//Play winning sound.
 	//Set alarm for about 3 seconds, then return to title screen.
+	//Restart game when alarm goes off.
 }

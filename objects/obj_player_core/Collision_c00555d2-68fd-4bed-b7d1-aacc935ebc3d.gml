@@ -1,4 +1,4 @@
-global.player_hp -= 1;
+comet_collision = true;
 with (other)
 {
 	instance_destroy();
