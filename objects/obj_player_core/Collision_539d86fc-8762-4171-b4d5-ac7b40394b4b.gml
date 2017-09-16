@@ -1,1 +1,1 @@
-star_pieces += 1;
+global.star_pieces += 1;

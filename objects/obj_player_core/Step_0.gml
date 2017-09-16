@@ -64,6 +64,7 @@ if (keyboard_check(vk_up)) && (keyboard_check(vk_down)) || !(keyboard_check(vk_u
 }
 
 //Detecting Gamepad connection:
+/*
 if (gamepad_is_connected(0))
 {
 	global.gpad = true;
@@ -74,6 +75,7 @@ else
 	global.gpad = false;
 	//Draw some text that says "Keyboard"
 }
+*/
 
 //controller movement:
 /*
@@ -117,7 +119,7 @@ else
 
 
 //if statement chunk for star pieces and sprites:
-switch (star_pieces)
+switch (global.star_pieces)
 {
 	case 0: 
 	{
@@ -154,34 +156,29 @@ switch (star_pieces)
 
 //Winning and losing conditions.
 //Destroy player if health reaches 0
-if (player_hp <= 0)
+if (global.player_hp <= 0)
 {
-	//Draw Text in middle of screen
-	//Play game over sound.
-	//Set an alarm for about 4 seconds, then go back to title screen.
-	//Restart the game once alarm goes off.
 	instance_destroy();
 	audio_play_sound(snd_explosion, 1, false);
-	instance_destroy(obj_comet_controller);
-	instance_destroy(obj_comet_controller2);
-	//audio_play_sound(snd_game_over, 0, false);
-	//draw_text(view_xport[0].x / 2, view_yport[0].y / 2, "Game Over");
-	
-}
-
-//Winning conditions.
-if (star_pieces == 5)
-{	
-	alarm[2] = 30;
-	//Draw text that says we win the game.
-	//Play winning sound.
-	//Set alarm for about 3 seconds, then return to title screen.
-	//Restart game when alarm goes off.
 	audio_stop_sound(snd_gameplay);
 	instance_destroy(obj_comet_controller);
 	instance_destroy(obj_comet_controller2);
-	//audio_play_sound(snd_game_won, 1, false);
-	//draw_text(view_xport[0].x / 2, view_yport[0].y / 2, "Congratulations!");
-	
+	instance_create_depth(0, 0, 1, obj_game_audio);
+}
+
+//Winning conditions.
+if (global.star_pieces == 5)
+{	
+	audio_stop_sound(snd_gameplay);
+	instance_destroy(obj_comet_controller);
+	instance_destroy(obj_comet_controller2);
+	accel_spd = 0; //Stop moving
+	instance_create_depth(0, 0, 1, obj_game_audio);
+}
+
+//Making sure we still win after collecting star pieces
+if (global.star_pieces == 5 && place_meeting(x, y,obj_comet_right) || place_meeting(x, y, obj_comet_left))
+{
+	// Do nothing.
 }
 
