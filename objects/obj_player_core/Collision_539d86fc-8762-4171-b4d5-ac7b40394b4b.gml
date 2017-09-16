@@ -1,0 +1,1 @@
+star_pieces += 1;

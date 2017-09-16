@@ -114,50 +114,19 @@ else
 }
 */
 
-//Chunk for detecting collisions with comets, and changing star pieces value
-if (comet_collision)
-{
-	global.player_hp -= 1;
-}
-else
-{
-	comet_collision = false;
-}
 
 
-//Checking star pieces value
-if (comet_collision && star_pieces >= 1 && star_pieces <= 4)
-{
-	star_pieces -= 1;
-	global.player_hp -= 1;
-}
-
-//Limiter for star pieces value 
-if (star_pieces == 0 && comet_collision)
-{
-	//Just decrement health
-	global.player_hp -= 1;
-}
-
-//Colliding with star pieces
-if (star_piece_obtained)
-{
-	star_pieces += 1;
-}
-
-
-//Switch case for changing sprites based on star pieces value:
-
+//if statement chunk for star pieces and sprites:
 switch (star_pieces)
 {
-	case 0:
+	case 0: 
 	{
 		sprite_index = spr_player_core;
 		break;
 	}
 	case 1:
 	{
-		sprite_index = spr_player_top_piece; 
+		sprite_index = spr_player_top_piece;
 		break;
 	}
 	case 2:
@@ -177,27 +146,42 @@ switch (star_pieces)
 	}
 	case 5:
 	{
-		sprite_index = spr_player_completed;
-		break;
+	sprite_index = spr_player_completed;
+	break;
 	}
 }
 
+
 //Winning and losing conditions.
 //Destroy player if health reaches 0
-if (global.player_hp == 0)
+if (player_hp <= 0)
 {
-	instance_destroy();
 	//Draw Text in middle of screen
 	//Play game over sound.
 	//Set an alarm for about 4 seconds, then go back to title screen.
 	//Restart the game once alarm goes off.
+	instance_destroy();
+	audio_play_sound(snd_explosion, 1, false);
+	instance_destroy(obj_comet_controller);
+	instance_destroy(obj_comet_controller2);
+	//audio_play_sound(snd_game_over, 0, false);
+	//draw_text(view_xport[0].x / 2, view_yport[0].y / 2, "Game Over");
+	
 }
 
 //Winning conditions.
 if (star_pieces == 5)
-{
+{	
+	alarm[2] = 30;
 	//Draw text that says we win the game.
 	//Play winning sound.
 	//Set alarm for about 3 seconds, then return to title screen.
 	//Restart game when alarm goes off.
+	audio_stop_sound(snd_gameplay);
+	instance_destroy(obj_comet_controller);
+	instance_destroy(obj_comet_controller2);
+	//audio_play_sound(snd_game_won, 1, false);
+	//draw_text(view_xport[0].x / 2, view_yport[0].y / 2, "Congratulations!");
+	
 }
+

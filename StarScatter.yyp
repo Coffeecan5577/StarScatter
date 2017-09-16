@@ -47,6 +47,22 @@
             }
         },
         {
+            "Key": "02ce5b9f-6171-4112-b3f7-804c04657045",
+            "Value": {
+                "id": "e8aa8b62-316b-40ca-b3e6-a49ba48ac82c",
+                "resourcePath": "sounds\\snd_game_won\\snd_game_won.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "074d36a8-6025-4bf7-8053-f898745d2b0c",
+            "Value": {
+                "id": "8b2e25e0-c8d3-44e2-98b9-e6f34ad910ca",
+                "resourcePath": "sounds\\snd_pickup_star\\snd_pickup_star.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0fb7bc74-23aa-4861-a2fa-e79857e349ee",
             "Value": {
                 "id": "fcafc863-e3c1-4b1e-893a-fec2fbca887d",
@@ -175,6 +191,14 @@
             }
         },
         {
+            "Key": "5b47c206-d9f0-426d-960f-0b85c4587e13",
+            "Value": {
+                "id": "60f711ad-26d2-49d4-aec5-5a90ef83fdcc",
+                "resourcePath": "sounds\\snd_gameplay\\snd_gameplay.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5d76231f-58b1-491f-99db-0a87cf025608",
             "Value": {
                 "id": "bb735f4c-8e08-43f7-ad16-42b762c6091b",
@@ -212,6 +236,14 @@
                 "id": "bb157038-c28e-42a8-92d0-dfacc6c9f6b9",
                 "resourcePath": "views\\6b3383fb-aeed-4e26-8ecc-5408fe51b30f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6c17136b-6b59-409b-9835-f4e39efb7479",
+            "Value": {
+                "id": "4b2f405f-0e2a-4552-80ca-ea383954bf98",
+                "resourcePath": "sounds\\snd_star_hurt\\snd_star_hurt.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -255,11 +287,11 @@
             }
         },
         {
-            "Key": "a3d8d494-c67e-4dcf-abb8-294187270016",
+            "Key": "a416e940-b877-4a45-aeb7-fb868ca82ae8",
             "Value": {
-                "id": "88cec87f-10a5-4b30-8fb8-237a3d6f6932",
-                "resourcePath": "objects\\obj_health_count\\obj_health_count.yy",
-                "resourceType": "GMObject"
+                "id": "4c3542ca-c044-442c-ba50-feaa08869848",
+                "resourcePath": "sounds\\snd_bullet_hit\\snd_bullet_hit.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -311,6 +343,22 @@
             }
         },
         {
+            "Key": "c7c7a158-b632-40ad-b376-fe9b0bb9964e",
+            "Value": {
+                "id": "9011eabd-c0da-4503-8846-ae89d9605454",
+                "resourcePath": "sounds\\snd_star_fire\\snd_star_fire.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "c7c89f65-0408-4603-bc90-d0d5f0c083be",
+            "Value": {
+                "id": "54fe2925-9b90-44f5-bf6f-22be8a9ecbed",
+                "resourcePath": "sounds\\snd_explosion\\snd_explosion.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c8a88719-a849-479b-abef-7a8fc1e23493",
             "Value": {
                 "id": "07c2ff42-b59b-49b1-9df1-b4c25ddedd38",
@@ -351,6 +399,14 @@
             }
         },
         {
+            "Key": "da4fda6e-7c79-4cee-b427-06a51ea1a783",
+            "Value": {
+                "id": "5df12882-f0b8-48b7-9d7a-032fdcaa3acb",
+                "resourcePath": "sounds\\snd_title_screen\\snd_title_screen.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "dd412e43-82a9-4627-9f81-5db7bf776ac7",
             "Value": {
                 "id": "6cc4a36e-d8ff-4a8b-84c5-0f5d2d5d854b",
@@ -372,6 +428,14 @@
                 "id": "57d67874-eb7b-4f50-9cf9-17af38467281",
                 "resourcePath": "sprites\\spr_star_bullet\\spr_star_bullet.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "df759904-7b78-4592-a5c7-2b39e60fab82",
+            "Value": {
+                "id": "3cb2c071-2676-4419-8cdf-98ab5c61d920",
+                "resourcePath": "sounds\\snd_game_over\\snd_game_over.yy",
+                "resourceType": "GMSound"
             }
         },
         {
