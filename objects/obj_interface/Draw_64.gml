@@ -11,13 +11,13 @@ if (instance_exists(obj_player_core))
 
 	if (global.star_pieces == 5)
 	{
-		draw_text(count_x + 150, count_y + 200, "Congratulations! ");
-		draw_text(count_x + 150, count_y + 250, "Press Enter to restart");
+		draw_text(count_x + 250, count_y + 100, "Congratulations! ");
+		draw_text(count_x + 150, count_y + 150, "Press Enter to restart");
 	}
 }
 
 else if (global.player_hp <= 0)
 {
-	draw_text(count_x + 150,count_y + 200, "Game Over ");
-	draw_text(count_x + 150, count_y + 250, "Press Enter to restart");
+	draw_text(count_x + 350, count_y + 100, "Game Over ");
+	draw_text(count_x + 150, count_y + 150, "Press Enter to restart");
 }
